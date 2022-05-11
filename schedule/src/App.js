@@ -9,6 +9,8 @@ function App() {
     setFilter(searchParam);
   };
 
+  const [data, setData] = useState({ items: [] });
+
   return (
     <div className="App">
       <SearchBar updateSearchParams={updateFilter} />
