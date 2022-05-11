@@ -1,20 +1,17 @@
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import SearchBar from "./SearchBar";
 
 function App() {
+  const [filter, setFilter] = useState({});
+
+  const updateFilter = (searchParam) => {
+    setFilter(searchParam);
+  };
+
   return (
     <div className="App">
-      <AddItem />
-    </div>
-  );
-}
-
-function AddItem(){
-  return(
-    <div>
-      <form>
-        <label for="text-form">Type something: </label>
-        <input type="text" id="text-form"/>
-      </form>
+      <SearchBar updateSearchParams={updateFilter} />
     </div>
   );
 }
