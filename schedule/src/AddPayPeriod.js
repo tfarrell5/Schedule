@@ -9,6 +9,8 @@ function AddPayPeriod(props) {
       startDate: startDate,
       endDate: endDate,
     });
+    setStartDate(new Date());
+    setEndDate(new Date());
   };
 
   return (
